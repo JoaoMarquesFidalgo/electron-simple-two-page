@@ -1,0 +1,20 @@
+{
+  "name": "electron2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron .",
+    "nodemon": "nodemon --watch * --exec electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fidalgoLoad@bitbucket.org/fidalgoLoad/electron2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fidalgoLoad/electron2#readme",
+  "dependencies": {
+    "electron": "^5.0.6"
+  }
+}

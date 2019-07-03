@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <h1>Electron 2</h1>
+    <hr>
+    <div id="content"></div>
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+
+        ipcRenderer.on('sendTodo', (event, todoList) => 
+        {
+            document.querySelector('#content').innerHTML = "<ul>";
+            for(const todo of todoList)
+            {
+                document.querySelector('#content').innerHTML += `<li>${todo}</li>`;    
+            }
+            document.querySelector('#content').innerHTML += "</ul>";
+        })
+        ipcRenderer.on('clearTodo', (event, todoList) => 
+        {
+            document.querySelector('#content').innerHTML = `<h5>To do list is empty</h5> <div>${todoList}</div>`;
+        })
+    </script>
+</body>
+</html>
