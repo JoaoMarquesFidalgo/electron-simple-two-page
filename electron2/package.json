@@ -15,6 +15,6 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/fidalgoLoad/electron2#readme",
   "dependencies": {
-    "electron": "^5.0.6"
+    "electron": "^15.5.5"
   }
 }
